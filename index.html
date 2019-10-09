@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+<!-- Latest compiled and minified CSS -->
+<!-- 
+AIzaSyCFivZx8KZ2aZDl5rI1ko0cFyQrp8qb4sY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+
+
+#ordered
+{
+	background-color: white;
+	border-style: inset;
+	border-color: white;
+	border-width: 5px;
+}	
+
+#select, #select button
+{
+	background-color: orange;
+
+}
+
+#categories
+{
+	background-color: yellow;
+}
+
+button
+{
+	border-color: red;
+	margin: 2px;
+}
+
+h1
+{
+	text-align:center;
+	margin: 0 auto;
+	padding: 5px;
+}
+</style>
+</head>
+<body>
+	<div class = "row">
+		<h1>Dennis Burger</h1>
+	</div>
+ <div class="row">
+    <div class="col-md-2" id = "categories">.col</div>
+    <div class="col-md-8" id = "select">
+    <button value = "3.25">Hamburger</button>
+    <button value = "3.75">Cheeseburger</button>
+    <button value = "4.75">Double Cheesburger</button>
+    </div>
+    <div class="col-md-2" id = "ordered">.col</div>
+  </div>
+
+  <script>
+  $("button").click(function()
+  {
+  	console.log("You clicked " + $(this).text() + " for " + $(this).val());
+  	$("ordered").append($(this).text() + "$" + $(this).val() + "<br>");
+
+  	// var btnText = $(this).val();
+  	// console.log(btnText);
+  })	
+  </script>
+</body>
+</html>
