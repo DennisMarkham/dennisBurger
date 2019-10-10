@@ -46,6 +46,18 @@ h1
 	margin: 0 auto;
 	padding: 5px;
 }
+
+#total
+{
+	position: absolute;
+	bottom: 0;
+	right: 5px;
+}
+
+.row
+{
+
+}
 </style>
 </head>
 <body>
@@ -59,8 +71,13 @@ h1
     <button value = "3.75">Cheeseburger</button>
     <button value = "4.75">Double Cheesburger</button>
     </div>
-    <div class="col-md-2" id = "ordered"></div>
+    <div class="col-md-2" id = "ordered">
+    	
+    </div>
+    
   </div>
+  
+  <span id = total>$0.00</span>
 
   <script>
   var totalPrice = 0;	
@@ -71,6 +88,7 @@ h1
 
   	totalPrice += parseFloat($(this).val());
   	console.log("Total price: " + totalPrice);
+  	$("#total").text("$" + totalPrice.toFixed(2))
   })	
   </script>
 </body>
