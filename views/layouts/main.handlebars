@@ -100,7 +100,25 @@ img
   	totalPrice += parseFloat($(this).val());
   	console.log("Total price: " + totalPrice);
   	$("#total").text("$" + totalPrice.toFixed(2))
-  })	
+
+     //okay, but how do I keep the order consistent even when changing to a new page.
+  //I would need some kind of post function.
+  //so I post $(this).text and $(this).value to the server.  Alright...
+  //Something like...
+  var food = $(this).text();
+  var price = $(this).val();
+  
+  var newItem = {food: food,
+        price: price}
+
+  //now I just have to figure out how to post it
+  //or maybe I should just do an SQL thing
+  })
+
+
+
+        
+      return $.post("/api/new", newItem);	
   </script>
 </body>
 </html>
