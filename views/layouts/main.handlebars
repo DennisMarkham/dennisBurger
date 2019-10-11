@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+<!-- Latest compiled and minified CSS -->
+<!-- 
+AIzaSyCFivZx8KZ2aZDl5rI1ko0cFyQrp8qb4sY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+
+
+#ordered
+{
+	background-color: white;
+	border-style: inset;
+	border-color: white;
+	border-width: 5px;
+}	
+
+#select, #select button
+{
+	background-color: orange;
+
+}
+
+#categories, #categories button
+{
+	background-color: yellow;
+}
+
+button
+{
+	border-color: red;
+	margin: 2px;
+}
+
+h1
+{
+	text-align:center;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+#total
+{
+	position: absolute;
+	bottom: 0;
+	right: 5px;
+}
+
+.row
+{
+
+}
+
+img
+{
+ width: 100px;
+ padding: 2px;
+}
+</style>
+</head>
+<body>
+	<div class = "row">
+		<h1>Dennis Burger</h1>
+	</div>
+ <div class="row">
+    <div class="col-md-2" id = "categories">
+    <button>Main</button>
+    <br>
+    <button>Sides</button>
+    <br>
+    <button>Beverages</button>
+    <br>
+    <button>Deserts</button>	
+    </div>
+
+    {{{body}}}
+    <div class="col-md-2" id = "ordered">
+    	
+    </div>
+    
+  </div>
+  
+  <span id = total>$0.00</span>
+
+  <script>
+  var totalPrice = 0;	
+  $("button").click(function()
+  {
+  	console.log("You clicked " + $(this).text() + " for " + $(this).val());
+  	$("#ordered").append($(this).text() + " $" + $(this).val() + "<br>");
+
+  	totalPrice += parseFloat($(this).val());
+  	console.log("Total price: " + totalPrice);
+  	$("#total").text("$" + totalPrice.toFixed(2))
+  })	
+  </script>
+</body>
+</html>

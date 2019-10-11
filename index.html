@@ -29,7 +29,7 @@ AIzaSyCFivZx8KZ2aZDl5rI1ko0cFyQrp8qb4sY -->
 
 }
 
-#categories
+#categories, #categories button
 {
 	background-color: yellow;
 }
@@ -58,6 +58,12 @@ h1
 {
 
 }
+
+img
+{
+ width: 100px;
+ padding: 2px;
+}
 </style>
 </head>
 <body>
@@ -65,9 +71,18 @@ h1
 		<h1>Dennis Burger</h1>
 	</div>
  <div class="row">
-    <div class="col-md-2" id = "categories"></div>
+    <div class="col-md-2" id = "categories">
+    <button>Main</button>
+    <br>
+    <button>Sides</button>
+    <br>
+    <button>Beverages</button>
+    <br>
+    <button>Deserts</button>	
+    </div>
+
     <div class="col-md-8" id = "select">
-    <button value = "3.25">Hamburger</button>
+    <button value = "3.25"><img src = "https://assets.bonappetit.com/photos/5d1cb1880813410008e914fc/16:9/w_1200,c_limit/Print-Summer-Smash-Burger.jpg"></img>Hamburger</button>
     <button value = "3.75">Cheeseburger</button>
     <button value = "4.75">Double Cheesburger</button>
     </div>
